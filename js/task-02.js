@@ -11,12 +11,11 @@ const ingredientsEl = document.querySelector('#ingredients');
 //   ingredientsEl.append(ingredientItem);
 // });
 
-
 const indigredientsElenents = ingredients.map(item => {
   const ingredientItem = document.createElement('li');
   ingredientItem.classList = 'item';
   ingredientItem.textContent = item;
   return ingredientItem;
-})
+});
 
 ingredientsEl.append(...indigredientsElenents);

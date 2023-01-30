@@ -8,7 +8,7 @@ const btnCreateEl = document.querySelector('button[data-create]');
 const btnDestroyEl = document.querySelector('button[data-destroy]');
 let num = 0;
 
-const createBoxes = (amount) => {
+const createBoxes = amount => {
   let boxParameters = 30;
   const boxes = [];
   for (let i = 0; i < amount; i++) {
@@ -20,7 +20,7 @@ const createBoxes = (amount) => {
     boxes.push(box);
   }
   return boxes;
-}
+};
 
 const destroyBoxes = () => (boxesEl.innerHTML = '');
 

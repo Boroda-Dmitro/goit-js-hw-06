@@ -13,21 +13,20 @@ const images = [
   },
 ];
 
-
-const galleryEl = document.querySelector('.gallery')
+const galleryEl = document.querySelector('.gallery');
 
 console.log(galleryEl);
 
-galleryEl.style.display = "flex";
-galleryEl.style.gap = "30px";
-galleryEl.style.listStyle = "none"; 
-// в сss теж стилi прописані, якщо закоментувати тут нічого не 
+galleryEl.style.display = 'flex';
+galleryEl.style.gap = '30px';
+galleryEl.style.listStyle = 'none';
+// в сss теж стилi прописані, якщо закоментувати тут нічого не
 // зміниться, я добавив стилі через js для тренування
 
-
-
-const galleryImagesEl = images.map(image => `<li><img src="${image.url}" alt="${image.alt}" width="450"></li>`).join("");
+const galleryImagesEl = images
+  .map(image => `<li><img src="${image.url}" alt="${image.alt}" width="450"></li>`)
+  .join('');
 
 console.log(galleryImagesEl);
 
-galleryEl.insertAdjacentHTML("afterbegin", galleryImagesEl)
+galleryEl.insertAdjacentHTML('afterbegin', galleryImagesEl);

@@ -1,19 +1,15 @@
-const btnDecrementEl = document.querySelector('button[data-action="decrement"]')
-const btnIncrementEl = document.querySelector('button[data-action="increment"]')
-const valueEl = document.querySelector('#value')
+const btnDecrementEl = document.querySelector('button[data-action="decrement"]');
+const btnIncrementEl = document.querySelector('button[data-action="increment"]');
+const valueEl = document.querySelector('#value');
+
+let counterValue = 0;
 
 btnIncrementEl.addEventListener('click', () => {
-    valueEl.textContent++;
-
-    // якщо поставити += 1 то додавання не відбувається, 
-    //до існуючого числа додається ще одна одничка
-    // замість дії 1 + 1 = 2 відбуваєтсья 1 + 1 = 11. чому так?
-    //тому поставив ++, так працює 
-})
-
+  counterValue += 1;
+  valueEl.textContent = counterValue;
+});
 
 btnDecrementEl.addEventListener('click', () => {
-    valueEl.textContent -= 1;
-})
-
-
+  counterValue -= 1;
+  valueEl.textContent = counterValue;
+});
