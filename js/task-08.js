@@ -11,8 +11,13 @@ function submitForm(event) {
     elements: { email, password },
   } = event.currentTarget;
 
+  const formBack = {
+    Email: email.value,
+    Password: password.value
+  };
+
   email.value === '' || password.value === ''
     ? alert('You shall not pass!!! All fields must be filled')
-    : console.log(`Email: ${email.value}, Password: ${password.value}`);
+    : console.log(formBack);
   event.currentTarget.reset();
 }
